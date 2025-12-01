@@ -1,465 +1,729 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kassim Ibrahim | Senior Developer Portfolio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+			rel="stylesheet" />
+		<script
+			src="https://kit.fontawesome.com/a076d05399.js"
+			crossorigin="anonymous"></script>
+		<!-- A simple icon kit for visuals -->
+		<style>
+			/* CSS RESET & DEFAULTS */
+			:root {
+				--bg-dark: #121828;
+				--bg-light: #1a2035;
+				--primary: #00aaff;
+				--primary-light: #61dafb;
+				--text-light: #e0e0e0;
+				--text-dark: #a0a0a0;
+				--border-color: rgba(255, 255, 255, 0.1);
+			}
 
-  <head>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+			html {
+				scroll-behavior: smooth;
+			}
 
-    <title>Workput demp</title>
+			body {
+				font-family: "Poppins", sans-serif;
+				background-color: var(--bg-dark);
+				color: var(--text-light);
+				line-height: 1.6;
+			}
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+			.container {
+				max-width: 1100px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
 
-    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+			/* HEADER / HERO SECTION */
+			.hero {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+				padding: 2rem;
+				background: linear-gradient(
+						rgba(18, 24, 40, 0.85),
+						rgba(18, 24, 40, 0.95)
+					),
+					url("https://www.transparenttextures.com/patterns/cubes.png");
+			}
 
-    <link rel="stylesheet" href="assets/css/templatemo-training-studio.css">
+			.hero h1 {
+				font-size: 4rem;
+				font-weight: 700;
+				letter-spacing: 2px;
+				background: linear-gradient(
+					90deg,
+					var(--primary),
+					var(--primary-light)
+				);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-bottom: 0.5rem;
+			}
 
-    </head>
-    
-    <body>
-    
-    <!-- ***** Preloader Start ***** -->
-    <div id="js-preloader" class="js-preloader">
-      <div class="preloader-inner">
-        <span class="dot"></span>
-        <div class="dots">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </div>
-    <!-- ***** Preloader End ***** -->
-    
-    
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">WORK<em>OUT</em></a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#features">About</a></li>
-                            <li class="scroll-to-section"><a href="#our-classes">Classes</a></li>
-                            <li class="scroll-to-section"><a href="#schedule">Schedules</a></li>
-                            <li class="scroll-to-section"><a href="#contact-us">Contact</a></li> 
-                            <li class="main-button"><a href="#">Sign Up</a></li>
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+			.hero h2 {
+				font-size: 1.5rem;
+				font-weight: 300;
+				color: var(--text-light);
+				margin-bottom: 2rem;
+			}
 
-    <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="top">
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/images/gym-video.mp4" type="video/mp4" />
-        </video>
+			.contact-info {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 1.5rem;
+				font-size: 0.9rem;
+			}
 
-        <div class="video-overlay header-text">
-            <div class="caption">
-                <h6>work harder, get stronger</h6>
-                <h2>easy with our <em>gym</em></h2>
-                <div class="main-button scroll-to-section">
-                    <a href="#features">Become a member</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
+			.contact-info li {
+				display: flex;
+				align-items: center;
+				color: var(--text-dark);
+			}
 
-    <!-- ***** Features Item Start ***** -->
-    <section class="section" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Choose <em>Program</em></h2>
-                        <img src="assets/images/line-dec.png" alt="waves">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aliquam corporis iste totam. Quasi cupiditate quia mollitia odio non vitae.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="First One">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Fitness</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil perferendis quae ex sequi molestiae mollitia, recusandae dignissimos animi earum voluptatum?</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="second one">
-                            </div>
-                            <div class="right-content">
-                                <h4>New Gym Training</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum vitae esse dolorem eveniet? Voluptatibus, exercitationem!</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="third gym training">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Muscle Course</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, consequuntur quas expedita aperiam magni officiis autem alias. Ipsum, voluptatibus voluptas.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="fourth muscle">
-                            </div>
-                            <div class="right-content">
-                                <h4>Advanced Muscle Course</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eius omnis inventore ullam esse ipsa nisi accusantium deleniti ad praesentium!</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="training fifth">
-                            </div>
-                            <div class="right-content">
-                                <h4>Yoga Training</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odit perferendis dicta numquam ab.</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon.png" alt="gym training">
-                            </div>
-                            <div class="right-content">
-                                <h4>Body Building Course</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem similique, minus ratione enim architecto quaerat?</p>
-                                <a href="#" class="text-button">Discover More</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Features Item End ***** -->
+			.contact-info i {
+				color: var(--primary);
+				margin-right: 0.5rem;
+				font-size: 1.1rem;
+			}
 
-    <!-- ***** Call to Action Start ***** -->
-    <section class="section" id="call-to-action">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="cta-content">
-                        <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
-                        <p>Ut consectetur, metus sit amet aliquet placerat, enim est ultricies ligula, sit amet dapibus odio augue eget libero. Morbi tempus mauris a nisi luctus imperdiet.</p>
-                        <div class="main-button scroll-to-section">
-                            <a href="#our-classes">Become a member</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Call to Action End ***** -->
+			/* GENERAL SECTION STYLING */
+			section {
+				padding: 6rem 0;
+				border-bottom: 1px solid var(--border-color);
+			}
 
-    <!-- ***** Our Classes Start ***** -->
-    <section class="section" id="our-classes">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Our <em>Classes</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" id="tabs">
-              <div class="col-lg-4">
-                <ul>
-                  <li><a href='#tabs-1'><img src="assets/images/tabs-first-icon.png" alt="">First Training Class</a></li>
-                  <li><a href='#tabs-2'><img src="assets/images/tabs-first-icon.png" alt="">Second Training Class</a></a></li>
-                  <li><a href='#tabs-3'><img src="assets/images/tabs-first-icon.png" alt="">Third Training Class</a></a></li>
-                  <li><a href='#tabs-4'><img src="assets/images/tabs-first-icon.png" alt="">Fourth Training Class</a></a></li>
-                  <div class="main-rounded-button"><a href="#">View All Schedules</a></div>
-                </ul>
-              </div>
-              <div class="col-lg-8">
-                <section class='tabs-content'>
-                  <article id='tabs-1'>
-                    <img src="assets/images/training-image-01.jpg" alt="First Class">
-                    <h4>First Training Class</h4>
-                    <p>Phasellus convallis mauris sed elementum vulputate. Donec posuere leo sed dui eleifend hendrerit. Sed suscipit suscipit erat, sed vehicula ligula. Aliquam ut sem fermentum sem tincidunt lacinia gravida aliquam nunc. Morbi quis erat imperdiet, molestie nunc ut, accumsan diam.</p>
-                    <div class="main-button">
-                        <a href="#">View Schedule</a>
-                    </div>
-                  </article>
-                  <article id='tabs-2'>
-                    <img src="assets/images/training-image-02.jpg" alt="Second Training">
-                    <h4>Second Training Class</h4>
-                    <p>Integer dapibus, est vel dapibus mattis, sem mauris luctus leo, ac pulvinar quam tortor a velit. Praesent ultrices erat ante, in ultricies augue ultricies faucibus. Nam tellus nibh, ullamcorper at mattis non, rhoncus sed massa. Cras quis pulvinar eros. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                    <div class="main-button">
-                        <a href="#">View Schedule</a>
-                    </div>
-                  </article>
-                  <article id='tabs-3'>
-                    <img src="assets/images/training-image-03.jpg" alt="Third Class">
-                    <h4>Third Training Class</h4>
-                    <p>Fusce laoreet malesuada rhoncus. Donec ultricies diam tortor, id auctor neque posuere sit amet. Aliquam pharetra, augue vel cursus porta, nisi tortor vulputate sapien, id scelerisque felis magna id felis. Proin neque metus, pellentesque pharetra semper vel, accumsan a neque.</p>
-                    <div class="main-button">
-                        <a href="#">View Schedule</a>
-                    </div>
-                  </article>
-                  <article id='tabs-4'>
-                    <img src="assets/images/training-image-04.jpg" alt="Fourth Training">
-                    <h4>Fourth Training Class</h4>
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices elementum odio ac tempus. Etiam eleifend orci lectus, eget venenatis ipsum commodo et.</p>
-                    <div class="main-button">
-                        <a href="#">View Schedule</a>
-                    </div>
-                  </article>
-                </section>
-              </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Our Classes End ***** -->
-    
-    <section class="section" id="schedule">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading dark-bg">
-                        <h2>Classes <em>Schedule</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="filters">
-                        <ul class="schedule-filter">
-                            <li class="active" data-tsfilter="monday">Monday</li>
-                            <li data-tsfilter="tuesday">Tuesday</li>
-                            <li data-tsfilter="wednesday">Wednesday</li>
-                            <li data-tsfilter="thursday">Thursday</li>
-                            <li data-tsfilter="friday">Friday</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="schedule-table filtering">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td class="day-time">Fitness Class</td>
-                                    <td class="monday ts-item show" data-tsmeta="monday">10:00AM - 11:30AM</td>
-                                    <td class="tuesday ts-item" data-tsmeta="tuesday">2:00PM - 3:30PM</td>
-                                    <td>William G. Stewart</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Muscle Training</td>
-                                    <td class="friday ts-item" data-tsmeta="friday">10:00AM - 11:30AM</td>
-                                    <td class="thursday friday ts-item" data-tsmeta="thursday" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                                    <td>Paul D. Newman</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Body Building</td>
-                                    <td class="tuesday ts-item" data-tsmeta="tuesday">10:00AM - 11:30AM</td>
-                                    <td class="monday ts-item show" data-tsmeta="monday">2:00PM - 3:30PM</td>
-                                    <td>Boyd C. Harris</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Yoga Training Class</td>
-                                    <td class="wednesday ts-item" data-tsmeta="wednesday">10:00AM - 11:30AM</td>
-                                    <td class="friday ts-item" data-tsmeta="friday">2:00PM - 3:30PM</td>
-                                    <td>Hector T. Daigle</td>
-                                </tr>
-                                <tr>
-                                    <td class="day-time">Advanced Training</td>
-                                    <td class="thursday ts-item" data-tsmeta="thursday">10:00AM - 11:30AM</td>
-                                    <td class="wednesday ts-item" data-tsmeta="wednesday">2:00PM - 3:30PM</td>
-                                    <td>Bret D. Bowers</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+			section:last-of-type {
+				border-bottom: none;
+			}
 
-    <!-- ***** Testimonials Starts ***** -->
-    <section class="section" id="trainers">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Expert <em>Trainers</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>Nunc urna sem, laoreet ut metus id, aliquet consequat magna. Sed viverra ipsum dolor, ultricies fermentum massa consequat eu.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/first-trainer.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>Strength Trainer</span>
-                            <h4>Bret D. Bowers</h4>
-                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/second-trainer.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>Muscle Trainer</span>
-                            <h4>Hector T. Daigl</h4>
-                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/third-trainer.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>Power Trainer</span>
-                            <h4>Paul D. Newman</h4>
-                            <p>Bitters cliche tattooed 8-bit distillery mustache. Keytar succulents gluten-free vegan church-key pour-over seitan flannel.</p>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Testimonials Ends ***** -->
-    
-    <!-- ***** Contact Us Area Starts ***** -->
-    <section class="section" id="contact-us">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div id="map">
-                      <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                    <div class="contact-form">
-                        <form id="contact" action="" method="post">
-                          <div class="row">
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="name" type="text" id="name" placeholder="Your Name*" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-6 col-sm-12">
-                              <fieldset>
-                                <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email*" required="">
-                              </fieldset>
-                            </div>
-                            <div class="col-md-12 col-sm-12">
-                              <fieldset>
-                                <input name="subject" type="text" id="subject" placeholder="Subject">
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
-                              </fieldset>
-                            </div>
-                            <div class="col-lg-12">
-                              <fieldset>
-                                <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                              </fieldset>
-                            </div>
-                          </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Contact Us Area Ends ***** -->
-    
-    <!-- ***** Footer Start ***** -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; 2020 WorkOut
-                </div>
-            </div>
-        </div>
-    </footer>
+			.section-title {
+				text-align: center;
+				font-size: 2.5rem;
+				font-weight: 600;
+				margin-bottom: 3rem;
+				position: relative;
+			}
 
-    <!-- jQuery -->
-    <script src="assets/js/jquery-2.1.0.min.js"></script>
+			.section-title::after {
+				content: "";
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 80px;
+				height: 4px;
+				background: var(--primary);
+				border-radius: 2px;
+			}
 
-    <!-- Bootstrap -->
-    <script src="assets/js/popper.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+			/* SKILLS SECTION */
+			.skills-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 2rem;
+			}
 
-    <!-- Plugins -->
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    <script src="assets/js/imgfix.min.js"></script> 
-    <script src="assets/js/mixitup.js"></script> 
-    <script src="assets/js/accordions.js"></script>
-    
-    <!-- Global Init -->
-    <script src="assets/js/custom.js"></script>
+			.skill-category {
+				background: var(--bg-light);
+				padding: 2rem;
+				border-radius: 8px;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+				border: 1px solid var(--border-color);
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
 
-  </body>
+			.skill-category:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0, 170, 255, 0.1);
+			}
+
+			.skill-category h3 {
+				font-size: 1.5rem;
+				color: var(--primary-light);
+				margin-bottom: 1.5rem;
+				border-bottom: 2px solid var(--border-color);
+				padding-bottom: 0.5rem;
+			}
+
+			.skill-list {
+				list-style: none;
+			}
+
+			.skill-list li {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: 0.75rem 0;
+				border-bottom: 1px solid var(--border-color);
+			}
+
+			.skill-list li:last-child {
+				border-bottom: none;
+			}
+
+			.skill-proficiency {
+				font-size: 0.9rem;
+				font-weight: 300;
+				color: var(--text-dark);
+				background: rgba(0, 170, 255, 0.1);
+				padding: 0.2rem 0.6rem;
+				border-radius: 12px;
+			}
+
+			/* PROJECTS SECTION */
+			.projects-container h3 {
+				font-size: 1.8rem;
+				color: var(--text-light);
+				margin-top: 3rem;
+				margin-bottom: 1.5rem;
+				padding-bottom: 0.5rem;
+				border-bottom: 1px solid var(--border-color);
+			}
+
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+				gap: 1.5rem;
+			}
+
+			.project-card {
+				background: var(--bg-light);
+				border: 1px solid var(--border-color);
+				border-radius: 8px;
+				padding: 1.5rem;
+				text-align: center;
+				transition: all 0.3s ease;
+			}
+
+			.project-card:hover {
+				transform: translateY(-5px);
+				border-color: var(--primary);
+			}
+
+			.project-card i {
+				font-size: 2.5rem;
+				color: var(--primary);
+				margin-bottom: 1rem;
+			}
+
+			.project-card p {
+				font-size: 1rem;
+				font-weight: 400;
+			}
+
+			/* EXPERIENCE SECTION - TIMELINE */
+			.timeline {
+				position: relative;
+				max-width: 800px;
+				margin: 0 auto;
+			}
+
+			.timeline::after {
+				content: "";
+				position: absolute;
+				width: 4px;
+				background-color: var(--bg-light);
+				top: 0;
+				bottom: 0;
+				left: 50%;
+				margin-left: -2px;
+			}
+
+			.timeline-item {
+				padding: 10px 40px;
+				position: relative;
+				background-color: inherit;
+				width: 50%;
+			}
+
+			.timeline-item::after {
+				content: "";
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				right: -10px;
+				background-color: var(--bg-dark);
+				border: 4px solid var(--primary);
+				top: 25px;
+				border-radius: 50%;
+				z-index: 1;
+			}
+
+			.left {
+				left: 0;
+				padding-right: 30px;
+			}
+
+			.right {
+				left: 50%;
+				padding-left: 30px;
+			}
+
+			.left::before {
+				content: " ";
+				height: 0;
+				position: absolute;
+				top: 28px;
+				width: 0;
+				z-index: 1;
+				right: 20px;
+				border: medium solid var(--bg-light);
+				border-width: 10px 0 10px 10px;
+				border-color: transparent transparent transparent
+					var(--bg-light);
+			}
+
+			.right::before {
+				content: " ";
+				height: 0;
+				position: absolute;
+				top: 28px;
+				width: 0;
+				z-index: 1;
+				left: 20px;
+				border: medium solid var(--bg-light);
+				border-width: 10px 10px 10px 0;
+				border-color: transparent var(--bg-light) transparent
+					transparent;
+			}
+
+			.right::after {
+				left: -10px;
+			}
+
+			.timeline-content {
+				padding: 20px;
+				background-color: var(--bg-light);
+				position: relative;
+				border-radius: 6px;
+				border: 1px solid var(--border-color);
+			}
+
+			.timeline-content h3 {
+				font-size: 1.2rem;
+				color: var(--primary-light);
+			}
+
+			.timeline-content h4 {
+				font-size: 1rem;
+				font-weight: 400;
+				color: var(--text-light);
+				margin-bottom: 0.5rem;
+			}
+
+			.timeline-date {
+				font-size: 0.8rem;
+				font-weight: 300;
+				color: var(--text-dark);
+				margin-bottom: 1rem;
+			}
+
+			.timeline-content p {
+				font-size: 0.9rem;
+				color: var(--text-dark);
+			}
+
+			/* FOOTER */
+			footer {
+				padding: 2rem;
+				text-align: center;
+				background: var(--bg-light);
+				border-top: 1px solid var(--border-color);
+			}
+
+			footer p {
+				color: var(--text-dark);
+				font-size: 0.9rem;
+			}
+
+			/* FADE-IN ANIMATION */
+			.fade-in {
+				opacity: 0;
+				transform: translateY(30px);
+				transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+			}
+
+			.fade-in.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			/* RESPONSIVENESS */
+			@media (max-width: 992px) {
+				.hero h1 {
+					font-size: 3rem;
+				}
+				.hero h2 {
+					font-size: 1.2rem;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.container {
+					padding: 0 1rem;
+				}
+				.hero h1 {
+					font-size: 2.5rem;
+				}
+
+				.contact-info {
+					flex-direction: column;
+					gap: 1rem;
+					align-items: flex-start;
+					margin-left: 20px;
+				}
+
+				section {
+					padding: 4rem 0;
+				}
+				.section-title {
+					font-size: 2rem;
+				}
+
+				/* Timeline collapse for mobile */
+				.timeline::after {
+					left: 20px;
+				}
+
+				.timeline-item {
+					width: 100%;
+					padding-left: 50px;
+					padding-right: 15px;
+				}
+
+				.timeline-item::before {
+					left: 40px;
+					border: medium solid var(--bg-light);
+					border-width: 10px 10px 10px 0;
+					border-color: transparent var(--bg-light) transparent
+						transparent;
+				}
+
+				.left::after,
+				.right::after {
+					left: 10px;
+				}
+				.right {
+					left: 0%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- HERO SECTION -->
+		<header class="hero">
+			<h1 class="fade-in">KASSIM IBRAHIM</h1>
+			<h2 class="fade-in">Senior Developer</h2>
+			<ul class="contact-info fade-in">
+				<li>
+					<i class="fas fa-map-marker-alt"></i>Lebanon, Beirut,
+					Choueifat, Ajniha
+				</li>
+				<li><i class="fas fa-phone"></i>(961) 76 475 825</li>
+				<li><i class="fas fa-envelope"></i>kassim.dev.exe@gmail.com</li>
+			</ul>
+		</header>
+
+		<main>
+			<!-- SKILLS SECTION -->
+			<section id="skills" class="container">
+				<h2 class="section-title fade-in">Skills</h2>
+				<div class="skills-grid">
+					<div class="skill-category fade-in">
+						<h3>Languages</h3>
+						<ul class="skill-list">
+							<li>
+								HTML / CSS
+								<span class="skill-proficiency">Expert</span>
+							</li>
+							<li>
+								Javascript
+								<span class="skill-proficiency">Expert</span>
+							</li>
+							<li>
+								Typescript
+								<span class="skill-proficiency">Advanced</span>
+							</li>
+							<li>
+								PHP
+								<span class="skill-proficiency">Expert</span>
+							</li>
+							<li>
+								SQL
+								<span class="skill-proficiency">Advanced</span>
+							</li>
+							<li>
+								Python
+								<span class="skill-proficiency"
+									>Intermediate</span
+								>
+							</li>
+							<li>
+								Kotlin
+								<span class="skill-proficiency">Novice</span>
+							</li>
+							<li>
+								Swift
+								<span class="skill-proficiency">Novice</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="skill-category fade-in">
+						<h3>Frameworks & Libraries</h3>
+						<ul class="skill-list">
+							<li>
+								ReactJS / NextJS
+								<span class="skill-proficiency">Expert</span>
+							</li>
+							<li>
+								Laravel
+								<span class="skill-proficiency">Advanced</span>
+							</li>
+							<li>
+								Ionic / Capacitor
+								<span class="skill-proficiency">Advanced</span>
+							</li>
+							<li>
+								React Native
+								<span class="skill-proficiency">Advanced</span>
+							</li>
+							<li>
+								SASS / Tailwind / Bootstrap
+								<span class="skill-proficiency">Expert</span>
+							</li>
+							<li>
+								VueJS / NuxtJS
+								<span class="skill-proficiency"
+									>Intermediate</span
+								>
+							</li>
+							<li>
+								Solid / SolidStart
+								<span class="skill-proficiency"
+									>Intermediate</span
+								>
+							</li>
+							<li>
+								JQuery
+								<span class="skill-proficiency">Expert</span>
+							</li>
+							<li>
+								Angular / Flash
+								<span class="skill-proficiency">Novice</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="skill-category fade-in">
+						<h3>Databases</h3>
+						<ul class="skill-list">
+							<li>
+								MySQL / MariaDB
+								<span class="skill-proficiency">Expert</span>
+							</li>
+							<li>
+								PostgreSQL
+								<span class="skill-proficiency"
+									>Intermediate</span
+								>
+							</li>
+							<li>
+								MongoDB
+								<span class="skill-proficiency"
+									>Intermediate</span
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- PROJECTS SECTION -->
+			<section id="projects" class="container">
+				<h2 class="section-title fade-in">Public Projects</h2>
+				<div class="projects-container">
+					<h3 class="fade-in">Websites</h3>
+					<div class="projects-grid">
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Barmaja Groups</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>OMSAR AFKAR</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Lebanese Civil Society Program</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Boubyan News</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Hajez</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Ishtari Today</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Odelice Chocolate & Gifts</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Dar Al-Oloum</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Centro Mall</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Al-Intishar</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Buddies Tracker</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>BBC Industrials</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>Kia Ghana</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-globe"></i>
+							<p>The German House</p>
+						</div>
+					</div>
+
+					<h3 class="fade-in">Mobile Apps</h3>
+					<div class="projects-grid">
+						<div class="project-card fade-in">
+							<i class="fas fa-mobile-alt"></i>
+							<p>Ishtari Today</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-mobile-alt"></i>
+							<p>Centro Mall</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-mobile-alt"></i>
+							<p>Medyar</p>
+						</div>
+						<div class="project-card fade-in">
+							<i class="fas fa-mobile-alt"></i>
+							<p>Buddies Tracker</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- EXPERIENCE SECTION -->
+			<section id="experience" class="container">
+				<h2 class="section-title fade-in">Experience</h2>
+				<div class="timeline">
+					<div class="timeline-item left fade-in">
+						<div class="timeline-content">
+							<h3>Senior Developer</h3>
+							<h4>KnockServices, Lebanon, Badaro</h4>
+							<div class="timeline-date">JAN 2023 - PRESENT</div>
+							<p>
+								Developed Centro Mall, Medyar, a customizable
+								CMS with a flexible widget component system and
+								route map that allows for page nesting, a
+								delivery system add-on for Centro Mall, an Order
+								system add-on for Centro Mall.
+							</p>
+						</div>
+					</div>
+					<div class="timeline-item right fade-in">
+						<div class="timeline-content">
+							<h3>Senior Developer</h3>
+							<h4>A&H Invest, Lebanon, Galaxy Mall</h4>
+							<div class="timeline-date">MAY 2020 - DEC 2022</div>
+							<p>
+								Developed Ishtari Today the wholesale E-commerce
+								app and the Seller webportal dashboard with the
+								Administrative management dashboard.
+							</p>
+						</div>
+					</div>
+					<div class="timeline-item left fade-in">
+						<div class="timeline-content">
+							<h3>Senior Developer</h3>
+							<h4>Barmaja Group, Lebanon, Ghobeiry</h4>
+							<div class="timeline-date">JUN 2013 - APR 2020</div>
+							<p>
+								Created multiple Proprietary apps and content
+								management systems.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- FOOTER -->
+		<footer>
+			<div class="container">
+				<p>&copy; 2024 Kassim Ibrahim. All Rights Reserved.</p>
+			</div>
+		</footer>
+
+		<!-- JAVASCRIPT FOR FADE-IN ANIMATION -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const fadeElems = document.querySelectorAll(".fade-in")
+
+				const observerOptions = {
+					root: null,
+					rootMargin: "0px",
+					threshold: 0.1,
+				}
+
+				const observer = new IntersectionObserver(
+					(entries, observer) => {
+						entries.forEach((entry) => {
+							if (entry.isIntersecting) {
+								entry.target.classList.add("visible")
+								observer.unobserve(entry.target)
+							}
+						})
+					},
+					observerOptions,
+				)
+
+				fadeElems.forEach((elem) => {
+					observer.observe(elem)
+				})
+			})
+		</script>
+	</body>
 </html>
